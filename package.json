@@ -1,0 +1,31 @@
+{
+  "name": "aws-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "sst bind next dev",
+    "lint": "next lint",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.816.0",
+    "@aws-sdk/s3-request-presigner": "^3.816.0",
+    "next": "^15.1.8",
+    "react": "^19.0.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/tailwindcss": "^3.1.0",
+    "aws-cdk-lib": "2.142.1",
+    "constructs": "10.3.0",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.8",
+    "sst": "^3.16.0",
+    "typescript": "^5.8.3"
+  }
+}
