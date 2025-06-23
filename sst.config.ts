@@ -1,5 +1,13 @@
 /// <reference path="./.sst/platform/config.d.ts" />
 
+const bucket = new sst.aws.Bucket("MyBucket2", {
+  access: "public"
+});
+
+new sst.aws.Nextjs("MyWeb2", {
+  link: [bucket]
+});
+
 export default $config({
   app(input) {
     return {
@@ -10,12 +18,6 @@ export default $config({
     };
   },
   async run() {
-    const bucket = new sst.aws.Bucket("MyBucket1", {
-      access: "public"
-    });
-
-    new sst.aws.Nextjs("MyWeb1", {
-      link: [bucket]
-    });
+    new sst.aws.Nextjs("MyWeb2");
   },
 });

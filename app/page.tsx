@@ -8,7 +8,7 @@ export const dynamic = "force-dynamic";
 export default async function Home() {
   const command = new PutObjectCommand({
     Key: crypto.randomUUID(),
-    Bucket: Resource.MyBucket1.name,
+    Bucket: MyBucket2!,
   });
   const url = await getSignedUrl(
     new S3Client({
@@ -24,7 +24,6 @@ export default async function Home() {
   return (
     <div className="page">
       <main className="main">
-        <h1>File Upload</h1>
         <Form url={url} />
       </main>
     </div>
