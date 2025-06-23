@@ -1,31 +1,24 @@
-/* components/form.module.css */
 .form {
-  padding: 20px;
-  border-radius: 4px;
-  background: #f8f8f8;
-  border: 1px solid #ddd;
-  max-width: 500px;
-  margin: 20px auto;
-}
-
-.form input {
-  margin-right: 16px;
-  padding: 8px;
-  border: 1px solid #ccc;
-}
-
-.form button {
-  padding: 8px 12px;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.form button:hover {
-  background: #f0f0f0;
-}
-
-.form button:active {
-  background: #e0e0e0;
-}
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-color: var(--gray-alpha-100);
+  }
+  
+  .form input {
+    margin-right: 1rem;
+  }
+  
+  .form button {
+    appearance: none;
+    padding: 0.5rem 0.75rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    border-radius: 0.375rem;
+    background-color: transparent;
+    font-family: var(--font-geist-sans);
+    border: 1px solid var(--gray-alpha-200);
+  }
+  
+  .form button:active:enabled {
+    background-color: var(--gray-alpha-200);
+  }
