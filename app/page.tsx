@@ -8,7 +8,7 @@ export const dynamic = "force-dynamic";
 export default async function Home() {
   const command = new PutObjectCommand({
     Key: crypto.randomUUID(),
-    Bucket: MyBucket2!,
+    Bucket: Resource.MyBucket.name,
   });
   const url = await getSignedUrl(
     new S3Client({
