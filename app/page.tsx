@@ -1,9 +1,11 @@
 import { Resource } from "sst";
-import Form from "@/components/form";
+import Form from "../components/form";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
 
 export const dynamic = "force-dynamic";
+
+// Cache bust - ensure deployment uses latest code
 
 export default async function Home() {
   const command = new PutObjectCommand({
